@@ -1,4 +1,6 @@
 require File.join(File.dirname(__FILE__), 'gilded_rose')
+require File.join(File.dirname(__FILE__), 'item')
+require 'pry'
 require 'test/unit'
 
 class TestUntitled < Test::Unit::TestCase
@@ -8,5 +10,4 @@ class TestUntitled < Test::Unit::TestCase
     GildedRose.new(items).update_quality()
     assert_equal items[0].name, "fixme"
   end
-
 end

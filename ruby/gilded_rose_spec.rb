@@ -1,4 +1,5 @@
 require File.join(File.dirname(__FILE__), 'gilded_rose')
+require File.join(File.dirname(__FILE__), 'item')
 
 describe GildedRose do
 
@@ -9,5 +10,4 @@ describe GildedRose do
       expect(items[0].name).to eq "fixme"
     end
   end
-
 end
