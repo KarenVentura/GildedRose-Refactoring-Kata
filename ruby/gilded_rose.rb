@@ -12,7 +12,7 @@ class GildedRose
   end
 
   def set_quality_by(item)
-    item.quality = item.quality - 1 if validation_for(item)
+    item.quality = item.quality - 1 if names_validation_for(item)
     item.quality = (return_quality(item) + 1) if item.quality < 50 && item.name == "Backstage passes to a TAFKAL80ETC concert"
   end
 
@@ -20,7 +20,7 @@ class GildedRose
     item.sell_in = item.sell_in - 1 if item.name != "Sulfuras, Hand of Ragnaros"
   end
 
-  def validation_for(item)
+  def names_validation_for(item)
     item.name != "Aged Brie" && item.name != "Backstage passes to a TAFKAL80ETC concert" && item.name != "Sulfuras, Hand of Ragnaros" && item.quality > 0
   end
 
